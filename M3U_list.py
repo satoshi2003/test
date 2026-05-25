@@ -233,7 +233,11 @@ def fetch_and_parse_m3u(url):
     try:
         response = requests.get(url, timeout=10)
         content = response.text
-        return parse_m3u(content)
+        channels = parse_m3u(content)
+        # Gắn thêm URL nguồn vào mỗi kênh
+        for ch in channels:
+            ch['source_m3u'] = url
+        return channels
     except Exception as e:
         print(f"Lỗi khi xử lý {url}: {str(e)[:50]}")
         return []
@@ -374,6 +378,10 @@ def main():
         for ch in channels:
             if 'name' not in ch:
                 continue
+                
+            # Gắn thêm URL nguồn
+            ch['source_m3u'] = SPECIAL_URL
+            
             ch_name_lower = ch['name'].lower()
             if 'highlight' in ch_name_lower or 'xem lại' in ch_name_lower:
                 continue
@@ -479,6 +487,11 @@ def main():
                         for extra_line in ch['extra']:
                             if not extra_line.startswith('#EXTINF'):
                                 f.write(extra_line + '\n')
+                                
+                    # Ghi thêm URL nguồn dạng comment
+                    if 'source_m3u' in ch:
+                        f.write(f'# Nguồn: {ch["source_m3u"]}\n')
+                        
                     f.write(ch['url'] + '\n')
         print("✅ Đã ghi file output.m3u thành công")
     except Exception as e:
