@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 from urllib.parse import unquote, urljoin
 
 # -------------------- CẤU HÌNH --------------------
-CHECK_HEALTH = True  # False: tắt kiểm tra link sống (chạy nhanh)
+CHECK_HEALTH = False   # False: tắt kiểm tra link sống (chạy nhanh)
 ENABLE_EPG = False      # False: tắt tải EPG
 SPECIAL_URL = "https://raw.githubusercontent.com/t23-02/bongda/refs/heads/main/bongda.m3u"
 
@@ -168,23 +168,34 @@ def resolve_m3u8_url(url, max_depth=1, session=None):
     # Tắt resolve để tăng tốc
     return url
 
-def check_channel_health(url, timeout=2):
+def check_channel_health(url, timeout=3):
     if not CHECK_HEALTH:
         return True
     if url.startswith('udp://'):
         return True
     try:
-        headers = {'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18'}
-        resp = requests.head(url, headers=headers, timeout=timeout, allow_redirects=True)
-        if resp.status_code < 400:
-            return True
-        if resp.status_code in (403, 452, 456, 405, 400) or resp.status_code >= 500:
-            headers_range = headers.copy()
-            headers_range['Range'] = 'bytes=0-1'
-            resp2 = requests.get(url, headers=headers_range, timeout=timeout, allow_redirects=True)
-            if resp2.status_code in (206, 200):
-                return True
-        return False
+        # Sử dụng User-Agent của các app IPTV hợp lệ để tránh bị WAF chặn
+        headers = {'User-Agent': 'TiviMate/4.7.0 (Linux; Android 11)'}
+        
+        # Dùng GET và stream=True để chỉ tải 1 phần nhỏ dữ liệu
+        resp = requests.get(url, headers=headers, stream=True, timeout=timeout, allow_redirects=True)
+        
+        if resp.status_code != 200:
+            return False
+            
+        # Đọc 1KB đầu tiên để kiểm tra ruột file
+        chunk = next(resp.iter_content(chunk_size=1024), b"").decode('utf-8', errors='ignore')
+        
+        # Nếu server trả về trang web (HTML) báo lỗi thay vì video/playlist
+        if chunk.strip().startswith("<!DOCTYPE html") or "<html" in chunk.lower():
+            return False
+            
+        # Nếu là playlist m3u8, BẮT BUỘC phải có thẻ định dạng HLS
+        if '.m3u8' in url.lower() or 'mpegurl' in resp.headers.get('Content-Type', '').lower():
+            if "#EXTM3U" not in chunk and "#EXTINF" not in chunk:
+                return False
+                
+        return True
     except:
         return False
 
@@ -233,11 +244,7 @@ def fetch_and_parse_m3u(url):
     try:
         response = requests.get(url, timeout=10)
         content = response.text
-        channels = parse_m3u(content)
-        # Gắn thêm URL nguồn vào mỗi kênh
-        for ch in channels:
-            ch['source_m3u'] = url
-        return channels
+        return parse_m3u(content)
     except Exception as e:
         print(f"Lỗi khi xử lý {url}: {str(e)[:50]}")
         return []
@@ -378,10 +385,6 @@ def main():
         for ch in channels:
             if 'name' not in ch:
                 continue
-                
-            # Gắn thêm URL nguồn
-            ch['source_m3u'] = SPECIAL_URL
-            
             ch_name_lower = ch['name'].lower()
             if 'highlight' in ch_name_lower or 'xem lại' in ch_name_lower:
                 continue
@@ -442,6 +445,25 @@ def main():
             if result:
                 valid_channels.append(result)
     print(f"Số kênh hợp lệ cuối cùng: {len(valid_channels)}")
+
+    # === THÊM CƠ CHẾ LỌC TRÙNG TÊN KÊNH ===
+    print("Đang lọc giữ lại 1 link tốt nhất cho mỗi kênh...")
+    final_valid_channels = []
+    seen_names = set()
+    
+    for ch in valid_channels:
+        # Nhận diện trùng lặp dựa trên Tên chuẩn hóa + Độ phân giải 
+        # (Để không xóa nhầm VTV3 HD và VTV3 FHD)
+        resolution = ch.get('resolution', '')
+        unique_key = f"{normalize_channel_name(ch['name'])}_{resolution}"
+        
+        if unique_key not in seen_names:
+            seen_names.add(unique_key)
+            final_valid_channels.append(ch)
+            
+    valid_channels = final_valid_channels
+    print(f"Số kênh duy nhất sau khi lọc trùng tên: {len(valid_channels)}")
+    # ======================================
     
     # Đổi tên kênh thể thao
     for ch in valid_channels:
@@ -487,11 +509,6 @@ def main():
                         for extra_line in ch['extra']:
                             if not extra_line.startswith('#EXTINF'):
                                 f.write(extra_line + '\n')
-                                
-                    # Ghi thêm URL nguồn dạng comment
-                    if 'source_m3u' in ch:
-                        f.write(f'# Nguồn: {ch["source_m3u"]}\n')
-                        
                     f.write(ch['url'] + '\n')
         print("✅ Đã ghi file output.m3u thành công")
     except Exception as e:
