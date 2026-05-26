@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 from urllib.parse import unquote, urljoin
 
 # -------------------- CẤU HÌNH --------------------
-CHECK_HEALTH = False   # False: tắt kiểm tra link sống (chạy nhanh)
+CHECK_HEALTH = True  # False: tắt kiểm tra link sống (chạy nhanh)
 ENABLE_EPG = False      # False: tắt tải EPG
 SPECIAL_URL = "https://raw.githubusercontent.com/t23-02/bongda/refs/heads/main/bongda.m3u"
 
