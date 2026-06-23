@@ -1,7 +1,6 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="" group-title="Kênh VTV" tvg-logo="https://i.imgur.com/BVwi3K3.png",VTV2 (FPT Play)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://live.fptplay53.net/live/media/vtv2/live247-hls-avc/vtv2.m3u8
+#EXTINF:-1 tvg-id="" group-title="Kênh VTV" tvg-logo="https://i.ytimg.com/vi/Cim-egsLkqw/maxresdefault.jpg",VTV2
+http://42.1.99.192:8080/live/vtv2.flv
 #EXTINF:-1 tvg-id="" group-title="Kênh VTV" tvg-logo="https://i.imgur.com/7rLCvgS.png",VTV3 (FPT Play)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://live-a.fptplay53.net/live/media/vtv3/live247-hls-avc/vtv3.m3u8
@@ -25,14 +24,12 @@ https://live.fptplay53.net/fnxch2/vtvcantho_abr.smil/chunklist_b4200000.m3u8
 https://live.fptplay53.net/live/media/vtv5tnb/live-hls-avc/vtv5tnb.m3u8
 #EXTINF:-1 tvg-id="" group-title="Kênh VTV" tvg-logo="https://i.imgur.com/R8c2swd.png",VTV5 Tây Nguyên (FPT Play)
 https://live.fptplay53.net/live/media/vtv5tn/live-hls-avc/vtv5tn.m3u8
-#EXTINF:-1 tvg-id="" group-title="Kênh VTV" tvg-logo="https://raw.githubusercontent.com/ntd249/logochannel/refs/heads/main/VTV_VietnamToday.png",Vietnam Today (FPT Play)
-https://live.fptplay53.net/fnxhd1/vntoday_vhls.smil/chunklist.m3u8
-#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/axn/KenhCoBan.png",🗝️AXN
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
+#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/axn.png",AXN HD
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://ace.hoiquan.click/AutoKey/admin
-https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/axn/KenhCoBan.m3u8
+#KODIPROP:inputstream.adaptive.license_key=9d29f87efdec3c9fab368f724a62ad0e:6f1c09c035eab36323d60d1454db3d20
+https://s7771.cdn.mytvnet.vn/pkg20/live_dzones/axn.smil/manifest.mpd
 #EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://i.pinimg.com/originals/8b/02/00/8b020050690f955ccb306cdf51324aea.png",HBO
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -57,27 +54,30 @@ https://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/cinemaworld.smil/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"WTKPYh1WdnvF/5QEqJQGgw","kid":"Z9riBSfGPa2qrmCaqRV3yw"}],"type":"temporary"}
 https://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/dreamwork.smil/manifest.mpd
-#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3b/BOXMOVIE1.jpg",Box Movie 1
+#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/master/Box%20Movie%201%20HD.png",BOX MOVIE 1 HD
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=a7c942778e874d43be92b8d0a0cd11b4:6d54358306571658ffdb952c6560688b
-https://livevlisctcdnw.seenow.vn/mean/BM1/manifest.mpd
-#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/hollywoodclassic.png",Hollywood Classics
+https://HaNoiIPTV.short.gy/HaNoiIPTV-Box_Movie_1_HD
+#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/master/Hollywood%20Classics%20HD.png",HOLLYWOOD CLASSICS HD
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=a7c942778e874d43be92b8d0a0cd11b4:6d54358306571658ffdb952c6560688b
-https://livevlisctcdnw.seenow.vn/mean/HC/manifest.mpd
-#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/box-hits/KenhBoSung.png",Box Hits
-#EXTVLCOPT: http-referrer=https://hoiquan.click/
-https://toiyeuvietnam.dpdns.org/OnliveTV/box-hits/Free.m3u8
-#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/warner-tv/KenhCoBan.png",🗝️Warner TV
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
+https://HaNoiIPTV.short.gy/HaNoiIPTV-Hollywood_Classics_HD
+#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/master/Box%20Hits.png",BOX HITS HD
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://ace.hoiquan.click/AutoKey/admin
-https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/warner-tv/KenhCoBan.m3u8
+#KODIPROP:inputstream.adaptive.license_key=a7c942778e874d43be92b8d0a0cd11b4:6d54358306571658ffdb952c6560688b
+https://HaNoiIPTV.short.gy/HaNoiIPTV-BOX_Hits_HD
+#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://freem3u.xyz/static/images/global/warnertv.png",Warner TV
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=086d09a40bff3a00aa6dd4dbaf9c13b2:34f1908cfe2e05ee060046d40f14aec9
+https://s7771.cdn.mytvnet.vn/pkg20/live_dzones/wtv.smil/manifest.mpd
 #EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://images.pluto.tv/channels/554158e864526b29254ff105/colorLogoPNG.png",FailArmy
 #EXTVLCOPT:http-referrer=https://embedme.top/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1
@@ -117,11 +117,16 @@ https://toiyeuvietnam.dpdns.org/OnliveTV/man/Free.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2942ed303e0d40c9b99c94c587bbf509:96cda24109734fb7920d799d58d1a9ae
 https://livevlisctcdnw.seenow.vn/mean/WO/manifest.mpd
-#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/fashionhd/KenhBoSung.png",Fashion TV
-#EXTVLCOPT: http-referrer=https://hoiquan.click/
-https://toiyeuvietnam.dpdns.org/OnliveTV/fashionhd/Free.m3u8
-#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://vnepg.site/logos/146.png",OUTDOOR CHANNEL
-https://live.fptplay53.net/epzhd2/outdoorfhd_vhls.smil/chunklist.m3u8
+#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://m.media-amazon.com/images/I/91B05VQC2kL.png",Fashion TV
+#EXTVLCOPT:http-user-agent=VThanhTivi
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=c1d9f25701023508bfa6737e3a8c7001:30c3613e9b06e0f7cc201014f31bf5d8
+https://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/ftv.smil/manifest.mpd
+#EXTINF:-1 tvg-id="" group-title="Giải Trí" tvg-logo="https://images.fptplay53.net/media/channels/icon_channel_outdoor-channel_165649323545.png",Outdoor Channel
+#EXTVLCOPT:http-user-agent=VThanhTivi
+https://live.fptplay53.net/epzhd2/outdoorfhd_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://images.pluto.tv/channels/62ba60f059624e000781c436/colorLogoPNG.png",00s Replay
 #EXTVLCOPT:http-referrer=https://embedme.top/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1
@@ -290,9 +295,12 @@ https://7pal.short.gy/nowhkp3
 https://7pal.short.gy/nowhkp1
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://i.imgur.com/Gr1qxbC.png",Now Sports PremierLeague 2 HD
 https://7pal.short.gy/nowhkp2
-#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/vtvcab16hd/KenhBoSung.png",ON Football
-#EXTVLCOPT: http-referrer=https://hoiquan.click/
-https://toiyeuvietnam.dpdns.org/OnliveTV/vtvcab16hd/Free.m3u8
+#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/master/ON%20Football%20HD.png",ON Football HD
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a7c942778e874d43be92b8d0a0cd11b4:6d54358306571658ffdb952c6560688b
+https://HaNoiIPTV.short.gy/HaNoiIPTV-ON_Football_HD_du_phong
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/master/ON%20Golf%20HD.png",ON Golf
 https://HaNoiIPTV.short.gy/HaNoiIPTV-ON_Golf_du_phong
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/master/On%20Sports%2B%20HD.png",On Sports+
@@ -311,8 +319,9 @@ http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=17291
 https://7pal.short.gy/prsport1
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://i.imgur.com/IwezEnz.png",PremierSports2-HD
 https://7pal.short.gy/prsport2
-#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/p5csyn1620551587.png",Sky Sport F1
-http://line.watchtivo-8k.com:80/play/live.php?mac=00:1A:79:3F:0C:96&stream=1149423&extension=ts&play_token=1jkVQWGCqc
+#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/skyf1/KenhBoSung.png",Sky Sport F1
+#EXTVLCOPT: http-referrer=https://hoiquan.click/
+https://toiyeuvietnam.dpdns.org/OnliveTV/skyf1/Free.m3u8
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/skymix/KenhBoSung.png",Sky Sport Mix
 #EXTVLCOPT: http-referrer=https://hoiquan.click/
 https://toiyeuvietnam.dpdns.org/OnliveTV/skymix/Free.m3u8
@@ -440,9 +449,8 @@ https://7pal.short.gy/tsn3ca
 https://7pal.short.gy/tsn4ca
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://i.imgur.com/6M4zAci.png",TSN5
 https://7pal.short.gy/tsn5ca
-#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://img-ali1.tv360.vn/image1/2025/09/17/17/175810574912/a5f8181388ab_640_360.png",TV360
-#EXTVLCOPT:http-user-agent=TV360/5.6 (Linux;Android 11; K) ExoPlayerLib/2.18.2
-https://vietanhtv.id.vn/tv360/9904/index.m3u8
+#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/tv360/KenhCoBan.png",TV360
+https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/tv360/KenhCoBan.m3u8
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://img-ali1.tv360.vn/image1/2025/11/27/14/1764229355411/83a9c979634e_180_180.png",TV360 Livestream
 https://vpsttt.vietanhtv.top/tv360/tv360.php?id=9888
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://img-ali1.tv360.vn/image1/2025/09/17/17/175810574912/a5f8181388ab_640_360.png",TV360 Promo
@@ -531,6 +539,8 @@ https://toiyeuvietnam.dpdns.org/HoiLamGi/65ea8b928145cb0008509426/index.m3u8
 https://7pal.short.gy/usanetwork
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://i.imgur.com/Q2qDLpV.png",V Sport UltraHD
 https://7pal.short.gy/VSportUHD
+#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://raw.githubusercontent.com/ntd249/logochannel/refs/heads/main/VTV_VietnamToday.png",Vietnam Today (TV360)
+https://freem3u.xyz/api/live/play.m3u8?vid=9951
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/5/TichHop-CoLaTV",VSBET - THỂ THAO HÀNG ĐẦU
 https://toiyeuvietnam.dpdns.org/DocQuyen/VSBETTHTHAOHNGU/TayChayVThanh.m3u8
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://i.imgur.com/nfkmvAY.png",VTV1 (TV360)
@@ -538,6 +548,12 @@ https://freem3u.xyz/api/live/play.m3u8?vid=2
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://raw.githubusercontent.com/ntd249/logochannel/refs/heads/main/VTV10.png",VTV10 (TV360)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://sgclient.duckdns.org/source/tv360.m3u8?id=98
+#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://freem3u.xyz/static/images/vtvcab/vtvcab16.png",VTVCab 16 ON Football
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"NPGQjP4uBe4GAEbUDxSuyQ","kid":"CG0JpAv/OgCqbdTbr5wTsg"}],"type":"temporary"}
+https://s7777.cdn.mytvnet.vn/pkg20/__cl/gvtsig/vstv265/manifest.mpd
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/vtvcab-23-golf-channel/KenhCoBan.png",VTVcab 23 - Golf Channel
 https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/vtvcab-23-golf-channel/KenhCoBan.m3u8
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://freem3u.xyz/static/images/vtvcab/vtvcab3.png",VTVCab 3 ON Sports
@@ -552,9 +568,10 @@ https://s76174.cdn.mytvnet.vn/pkg20/__cl/gvtsig/vstv264/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"NPGQjP4uBe4GAEbUDxSuyQ","kid":"CG0JpAv/OgCqbdTbr5wTsg"}],"type":"temporary"}
 https://s128199.cdn.mytvnet.vn/pkg20/__cl/gvtsig/vstv311/manifest.mpd
-#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/WomenSportsNetwork/KenhBoSung.png",Women's Sports Network
-#EXTVLCOPT: http-referrer=https://hoiquan.click/
-https://toiyeuvietnam.dpdns.org/OnliveTV/WomenSportsNetwork/Free.m3u8
+#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://images.pluto.tv/channels/686d8dd294a028da3ac59566/colorLogoPNG_1753992941899.png",Women's Sports Network
+#EXTVLCOPT:http-referrer=https://embedme.top/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1
+https://toiyeuvietnam.dpdns.org/HoiLamGi/686d8dd294a028da3ac59566/index.m3u8
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://i.imgur.com/jVI5bge.png",Ziggo Sport HD
 https://7pal.short.gy/zigosHD
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/master/Danh%20s%C3%A1ch%20k%C3%AAnh/N%C6%B0%E1%BB%9Bc%20ngo%C3%A0i/%E4%BA%94%E6%98%9F%E4%BD%93%E8%82%B2%E9%A2%91%E9%81%93.png",五星体育 • THỂ THAO 5 SAO
@@ -631,12 +648,6 @@ https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/tv360-7/KenhCoBan.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ace.hoiquan.click/AutoKey/admin
 https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/tv360-8/KenhCoBan.m3u8
-#EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/vtvcab-16-hd/KenhCoBan.png",🗝️VTVcab 16 - On Football HD
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://ace.hoiquan.click/AutoKey/admin
-https://toiyeuvietnam.dpdns.org/TuyetDoiKhongKinhDoanh/vtvcab-16-hd/KenhCoBan.m3u8
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/23xmvkh64yw8qg8/TichHop-RoBong",🟢 -Fulham United FC Reserves
 https://toiyeuvietnam.dpdns.org/RoBongTV/23xmvkh64yw8qg8/truyenhinh.m3u8
 #EXTINF:-1 tvg-id="" group-title="Thể Thao" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/l7oqdehglj8nr51/TichHop-RoBong",🟢 BSS Sporting Club-
